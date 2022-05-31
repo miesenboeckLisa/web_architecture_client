@@ -1,0 +1,15 @@
+
+<div class="ui  vertical masthead center aligned segment">
+  <div class="ui container">
+    <div class="ui large secondary three menu">
+      <a routerLink="home" routerLinkActive="active" class="item">Home</a>
+      <a routerLink="offers" routerLinkActive="active" class="item">Angebote</a>
+      <a *ngIf="isLoggedIn()" routerLink="myspace" routerLinkActive="active" class="item">Mein Bereich</a>
+      <a routerLink="login" routerLinkActive="active" class="item">{{getLoginLabel()}}</a>
+    </div>
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>
+

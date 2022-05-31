@@ -1,0 +1,13 @@
+<div class="ui search "  [ngClass]="{ loading: isLoading }">
+  <div class="ui icon input">
+    <input (keyup)="keyup.emit(searchTerm.value)" #searchTerm  type="text" placeholder="Suche nach Angebot">
+    <i class="search icon"></i>
+  </div>
+  <div class="results transition" [ngClass]="{ visible: foundOffers.length }">
+    <a href (click)="offerSelected.emit(offer); false" class="result" *ngFor="let offer of foundOffers">
+      <div class="content">
+        <div class="title" >{{ offer.title }}</div>
+      </div>
+    </a>
+  </div>
+</div>

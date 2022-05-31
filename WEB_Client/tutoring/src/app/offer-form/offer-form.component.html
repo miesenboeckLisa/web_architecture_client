@@ -1,0 +1,73 @@
+<div class="ui container padding">
+  <h1>Neues Angebot erstellen</h1>
+  <form class="ui large form" [formGroup]="offerForm" (ngSubmit)="submitForm()">
+    <input type="hidden" formControlName="id">
+    <div class="field">
+      <label>Titel</label>
+      <input formControlName="title">
+      <div *ngIf="errors['title']" class="ui negative message"> {{
+        errors['title'] }} </div>
+    </div>
+    <div class="field">
+      <label>Beschreibung</label>
+      <textarea rows="5" formControlName="description"></textarea>
+    </div>
+    <div class="field">
+      <label>Kategorie</label>
+      <input type="text" formControlName="category">
+      <div *ngIf="errors['category']" class="ui negative message">{{
+        errors['category'] }}</div>
+    </div>
+    <div class="field">
+      <label>Preis</label>
+      <input formControlName="price">
+    </div>
+    <fieldset>
+      <div class="field">
+        <legend>Termin</legend><br><br>
+
+        <div formArrayName="appointments" >
+          <div class="fields" *ngFor="let control of appointments?.controls; index as i; last as l" [formGroupName]="i">
+
+            <input type="hidden" formControlName="id">
+
+            <div class="six wide field">
+              <label>Tag</label>
+              <input type="date" formControlName="date" >
+              <div *ngIf="errors['date']" class="ui negative message">{{errors['date'] }}</div>
+            </div>
+
+            <div class="six wide field">
+              <label>Von</label>
+              <input type="datetime-local" formControlName="begin">
+              <div *ngIf="errors['begin']" class="ui negative message">{{errors['begin'] }}</div>
+            </div>
+
+            <div class="six wide field">
+              <label>Bis</label>
+              <input type="datetime-local" formControlName="end">
+              <div *ngIf="errors['end']" class="ui negative message">{{errors['end'] }}</div>
+            </div>
+
+
+            <div *ngIf="errors['appointments']" class="ui negative message">{{ errors['appointments'] }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" buttonAddAppointment">
+
+        <div class="two wide field">
+          <button (click)="addAppointmentControl()" class="ui large orange button" type="button">+</button>
+        </div>
+
+      </div>
+    </fieldset>
+    <div class="field">
+      <div *ngIf="errors['appointments']" class="ui negative message">{{ errors['appointments'] }}</div>
+    </div>
+
+    <button type="submit" class="ui button" [disabled]="offerForm.invalid">Speichern</button>
+  </form>
+
+</div>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e45c7cf6-3772-48bf-bd5f-7e378c0661f6" name="HETZNER" url="http://tutoring.s1910456020.student.kwmhgb.at/">
+        <fileTransfer rootFolder="/usr/home/sstud968/public_html/tutoring/tutoringServer" accessType="SFTP" host="s191056020.student.kwmhgb.at" port="222" sshConfigId="5fdd39d4-7789-4438-8c5a-180c5e7a4bda" sshConfig="sstud968@s191056020.student.kwmhgb.at:222 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

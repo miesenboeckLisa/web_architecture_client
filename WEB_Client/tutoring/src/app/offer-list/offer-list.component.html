@@ -1,0 +1,16 @@
+<div class="ui container padding">
+  <div class="ui grid">
+    <div class="twelve wide column">
+      <h1 class="ui header left aligned">Lass und gemeinsam wachsen.. </h1>
+      <h3 class="ui header left aligned">Wo können wir dich unterstützen? </h3><br>
+    </div>
+  </div>
+  <bs-search  class="column" (offerSelected)="offerSelected($event)"></bs-search>
+</div>
+
+<div class="ui link cards paddingleft">
+  <a *ngFor="let offer of offers" class="bs-offer-list-item" [offer]="offer" [routerLink]="offer.id.toString()"></a>
+</div>
+
+
+

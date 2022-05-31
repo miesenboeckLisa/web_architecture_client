@@ -1,0 +1,68 @@
+<div class="ui container padding">
+  <div class="ui grid">
+    <div class="ten wide column">
+      <h1 class="ui header left aligned">Hallo {{init()}} ! </h1>
+      <h3 class="ui header left aligned">Willkommen in deinem persönlichen Bereich!</h3><br>
+    </div>
+    <div class="six wide column">
+      <img class="small ui image center" src="assets/rocket.png">
+    </div>
+
+    <!-- Messages -->
+    <div class="twelve wide column" *ngIf="isTutor()">
+      <h2>Deine Nachrichten:</h2>
+      <div class="cards ui link gap">
+      <div  *ngFor="let offer of offersOfTut">
+        <div *ngIf="offer.message!=null" class="OfferMessage">
+          <h4>{{offer.title}}</h4>
+          <p>{{offer.message}}</p>
+          <button class="ui tiny orange icon button" (click)="returnMessage()">Antworten</button>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- Appointments which are booked-->
+    <div class="twelve wide column" *ngIf="isTutor()">
+      <h2>Folgende Termine wurde bereits gebucht:</h2>
+      <div class="ui cards ">
+        <a *ngFor="let appointment of bookedAppointsOfTut; let i = index" class="bs-appointment-list" [appointment]="appointment" [offers]="offersOfTut"></a>
+      </div>
+      </div>
+
+    <!-- offers of tut -->
+    <div class="ten wide column paddingheader" *ngIf="isTutor()">
+      <h2>Deine Angebote:</h2>
+    </div>
+    <div class="six wide column" *ngIf="isTutor()">
+      <a routerLink="offer-form" class="ui orange button add">
+        <i class="add button white icon"></i>Neues Angebot hinzufügen</a>
+    </div>
+    <div class="sixteen wide column paddingheader" *ngIf="isTutor()">
+      <div class="cards ui link">
+        <a *ngFor="let offer of offersOfTut" class="bs-offer-list-item" [offer]="offer" routerLink="../offers/{{offer.id.toString()}}"></a>
+      </div>
+    </div>
+
+    <!-- history of tut -->
+    <div class="sixteen wide column paddingheader" *ngIf="isTutor()">
+      <h2>Deine vergangenen Termine:</h2>
+      <div class="ui cards ">
+        <a *ngFor="let appointment of historyOfTut; let i = index" class="bs-appointment-list" [appointment]="appointment" [offers]="offersOfTut"></a>
+      </div>
+    </div>
+
+    <!--Students Suff -->
+    <div *ngIf="isTutor()==false" class="twelve wide column paddingheader">
+      <h2>Deine gebuchten Termine:</h2>
+      <div class="cards ui">
+        <a *ngFor="let appointment of bookedAppoints; let i = index" class="bs-appointment-list" [appointment]="appointment" [offers]="offers"></a>
+      </div>
+      <h2>Deine vergangenen Buchungen:</h2>
+      <div class="cards ui">
+        <a *ngFor="let appointment of studentHistory; let i = index" class="bs-appointment-list" [appointment]="appointment" [offers]="offers"></a>
+      </div>
+    </div>
+
+  </div>
+</div>

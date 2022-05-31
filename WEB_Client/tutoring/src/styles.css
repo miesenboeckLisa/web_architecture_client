@@ -1,0 +1,170 @@
+/* You can add global styles to this file, and also import other style files */
+
+.padding {
+  padding: 2em !important;
+  padding-top: 5em !important;
+}
+.paddingheader{
+  padding-top: 2em !important;
+}
+
+.bs-offer-list-item {
+  padding-top: 2em !important;
+  padding-left: 3em !important;
+  padding-right: 0.5em;
+}
+.gap{
+  margin: 1em !important;
+}
+.card img{
+  height: 250px;
+  width: 250px;
+}
+
+.content{
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: none;
+  border-top: 1px solid rgba(34,36,38,.1);
+  background: 0 0;
+  margin: 0;
+  padding: 1em 1em;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-size: 1em;
+  border-radius: 0;
+}
+
+.header{
+  font-weight: 700;
+  color: black;
+  font-size: 1.28571429em;
+  margin-top: -.21425em;
+  line-height: 1.28571429em;
+}
+
+.meta{
+  font-size: 1em;
+  color: rgba(0,0,0,.4);
+}
+
+.description{
+  clear: both;
+  color: rgba(0,0,0,.68);
+}
+
+.extra{
+  max-width: 100%;
+  min-height: 0!important;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  border-top: 1px solid rgba(0,0,0,.05)!important;
+  position: static;
+  background: 0 0;
+  width: auto;
+  margin: 0 0;
+  padding: .75em 1em;
+  top: 0;
+  left: 0;
+  color: rgba(0,0,0,.4);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: color .1s ease;
+  transition: color .1s ease;
+}
+
+.right {
+  float: right;
+
+}
+
+.radioForm{
+  margin-top: 0.5em;
+}
+
+.ui.orange.button{
+  margin-top: 2em;
+}
+
+div.radioForm>label{
+  margin-left: 0.5em;
+}
+
+.trashbutton{
+  padding-left: 5.6em;
+  border: 0px;
+  background-color: transparent;
+}
+
+.whitespace{
+  margin:unset;
+  margin-left: 1em !important;
+  margin-right: 1em !important;
+}
+
+.paddingleft{
+  padding-left: 12em;
+padding-right: 12em;
+}
+
+fieldset{
+  border: rgba(229, 229, 229, 0.57) 1px solid !important;
+  padding-right: 0.5em;
+  height: 500px;
+}
+
+.buttonAddAppointment{
+  display: inline;
+  float: left;
+}
+
+.headline{
+  color: orange;
+  border: none;
+}
+
+.textarea{
+  width: 60%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+.OfferMessage{
+  border: solid #c2c2c2 1px;
+  width: 300px;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+.ui.medium.image{
+  width: 250px !important;
+}
+
+.OfferMessage{
+  margin-right: 1em;
+}
+.history{
+  background-color: rgb(255, 252, 252);
+}
+
+.slogan{
+  margin-bottom: 2em !important;
+}
+
+.add{
+  margin: 0.2em !important;
+}
+
+.angleLeft{
+  size: 3em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}

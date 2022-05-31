@@ -1,0 +1,22 @@
+  <div class="card gap">
+    <div class="image">
+      <img class="ui medium image" [src]="offer?.category?.picture" [routerLink]="offer?.id?.toString()">
+    </div>
+    <div class="content">
+      <div class="description">Angebot Nr.: {{ offer?.id }}</div>
+      <div class="header">{{ offer?.title }}</div>
+      <div class="meta">
+        <a> {{offer?.category?.title}} </a>
+      </div>
+    </div>
+    <div class="extra content">
+      <span class="right floated">
+        {{offer?.user?.firstname}} {{offer?.user?.lastname}}
+      </span>
+      <span *ngIf="offer?.appointments">
+        <i class="calendar outline icon"></i>
+        {{ offer?.appointments?.length || '0' }} Termine
+      </span>
+    </div>
+  </div>
+
